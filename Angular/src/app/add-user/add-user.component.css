@@ -1,0 +1,33 @@
+input.form-control {
+  padding: 16px;
+  display: block;
+  margin: 16px;
+  margin-left: 30%;
+  width: 40%;
+}
+
+label.control-label {
+  margin-left: 30%;
+}
+
+input {
+  text-align: left;
+}
+
+h4.top-text {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.error-message {
+  margin-left: 30%;
+  color: red;
+  font-size: .8rem;
+}
+
+.bottom-btn {
+  display: block;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

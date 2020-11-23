@@ -1,0 +1,28 @@
+<div class="top-container">
+  <div class="container-fluid">
+    <div class="row" *ngFor="let listItems of allMemberData">
+      <div class="top-card" col-md-6>
+        <div class="top-text" style="text-align: center !important;">
+          MemberShip Name: <b>{{listItems.membership_name}}</b>
+        </div>
+        <div class="description-text">
+          <b>Description:</b>{{listItems.description}}
+        </div>
+        <div class="cost-text">
+          <b>Cost:</b>{{listItems.membership_plan_cost}}
+        </div>
+
+        <div class="duration-text">
+          <b>Duration:</b>{{listItems.membership_plan_duration}}
+        </div>
+
+        <div class="marketing-text">
+          <b>Marketing Filed Name :</b>
+          <div *ngFor="let data of listItems.marketingFields">
+            <li>{{data.marketing_field_name}}</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

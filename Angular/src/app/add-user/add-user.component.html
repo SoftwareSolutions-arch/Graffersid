@@ -1,0 +1,116 @@
+<div id="add_employee" class="modal custom-modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h4 class="modal-title" class="top-text">Add New User</h4>
+      </div>
+      <div class="modal-body">
+        <form class="m-b-30" [formGroup]="addUser" novalidate>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Name</label>
+                <input class="form-control" type="text" formControlName="name" required>
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.name">
+                <div class="error-message" *ngIf="addUser.get('name').hasError(error.type) &&
+              (addUser.get('name').dirty || addUser.get('name').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Mobile</label>
+                <input type="text" class="form-control" formControlName="mobile">
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.mobile">
+                <div class="error-message" *ngIf="addUser.get('mobile').hasError(error.type) &&
+              (addUser.get('mobile').dirty || addUser.get('mobile').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Email</label>
+                <input type="email" class="form-control" type="text" formControlName="email">
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.email">
+                <div class="error-message" *ngIf="addUser.get('email').hasError(error.type) &&
+              (addUser.get('email').dirty || addUser.get('email').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Address</label>
+                <input class="form-control" type="text" formControlName="address">
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.address">
+                <div class="error-message" *ngIf="addUser.get('address').hasError(error.type) &&
+              (addUser.get('address').dirty || addUser.get('address').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">City</label>
+                <input class="form-control" type="text" formControlName="city">
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.city">
+                <div class="error-message" *ngIf="addUser.get('city').hasError(error.type) &&
+              (addUser.get('city').dirty || addUser.get('city').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Country</label>
+                <input class="form-control" type="text" formControlName="country">
+              </div>
+            </div>
+            <div>
+              <ng-container *ngFor="let error of error_messages.country">
+                <div class="error-message" *ngIf="addUser.get('country').hasError(error.type) &&
+              (addUser.get('country').dirty || addUser.get('country').touched)">
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label class="control-label">Zip Code</label>
+                <input type="text" class="form-control" formControlName="zipcode">
+              </div>
+            </div>
+          </div>
+          <div>
+            <ng-container *ngFor="let error of error_messages.zipcode">
+              <div class="error-message" *ngIf="addUser.get('zipcode').hasError(error.type) &&
+            (addUser.get('zipcode').dirty || addUser.get('zipcode').touched)">
+                {{ error.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <button class="bottom-btn" mat-stroked-button color="primary" (click)="addNewUser()">Create User</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
